@@ -1,7 +1,8 @@
 name: is_loading_widget
 description: A Flutter package for handling loading states with overlaying indicators.
 version: 0.0.1
-homepage: https://github.com/Sirius-Bytes/isloadingwidget.git
+homepage: https://github.com/Sirius-Bytes/isloadingwidget
+repository: https://github.com/Sirius-Bytes/isloadingwidget.git
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
