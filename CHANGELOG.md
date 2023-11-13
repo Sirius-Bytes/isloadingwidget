@@ -10,3 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release of the `is_loading_widget` package.
 - Implemented `IsLoadingWidget` for handling loading states with overlaying indicators.
 
+## [1.0.1] - 2023-11-15
+- Fixed issue with ...
+- Added new feature ...
