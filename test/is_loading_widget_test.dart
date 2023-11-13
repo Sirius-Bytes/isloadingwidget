@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:is_loading_widget/is_loading_widget.dart';
 
+/// Main test suite for the IsLoadingWidget class.
 void main() {
+  /// Test case: IsLoadingWidget renders correctly.
   testWidgets('IsLoadingWidget renders correctly', (WidgetTester tester) async {
     // Build our widget and trigger a frame.
     await tester.pumpWidget(
@@ -10,8 +12,7 @@ void main() {
         home: IsLoadingTestWrapper(
           child: IsLoadingWidget(
             isLoading: false,
-            child:
-                Container(), // You can replace this with your actual child widget.
+            child: Container(), // Replace this with your actual child widget.
           ),
         ),
       ),
@@ -22,9 +23,10 @@ void main() {
     expect(find.byType(Container), findsOneWidget);
     expect(find.byType(CircularProgressIndicator), findsNothing);
 
-    // You can add more test cases based on your specific requirements.
+    // Additional test cases can be added based on specific requirements.
   });
 
+  /// Test case: IsLoadingWidget shows loading indicator when isLoading is true.
   testWidgets('IsLoadingWidget shows loading indicator when isLoading is true',
       (WidgetTester tester) async {
     // Build our widget and trigger a frame.
@@ -33,8 +35,7 @@ void main() {
         home: IsLoadingTestWrapper(
           child: IsLoadingWidget(
             isLoading: true,
-            child:
-                Container(), // You can replace this with your actual child widget.
+            child: Container(), // Replace this with your actual child widget.
           ),
         ),
       ),
@@ -43,13 +44,18 @@ void main() {
     // Verify that the loading indicator is displayed.
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
 
-    // You can add more test cases based on your specific requirements.
+    // Additional test cases can be added based on specific requirements.
   });
 }
 
+/// Wrapper widget for testing IsLoadingWidget.
 class IsLoadingTestWrapper extends StatelessWidget {
+  /// The child widget to be wrapped for testing.
   final Widget child;
 
+  /// Constructor for IsLoadingTestWrapper.
+  ///
+  /// [child]: The child widget to be wrapped for testing.
   const IsLoadingTestWrapper({Key? key, required this.child}) : super(key: key);
 
   @override

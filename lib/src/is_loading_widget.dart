@@ -1,32 +1,37 @@
 import 'package:flutter/material.dart';
 
-// This widget is designed to handle loading states by overlaying a loading indicator on top of the child widget.
-
+/// A widget designed to handle loading states by overlaying a loading indicator on top of the child widget.
 class IsLoadingWidget extends StatelessWidget {
-  // Background color of the overlay. Defaults to white.
+  /// Background color of the overlay. Defaults to white.
   final Color backGroundColor;
 
-  // Whether to build the child widget while loading. Defaults to true.
+  /// Whether to build the child widget while loading. Defaults to true.
   final bool buildChildWhileLoading;
 
-  // The main child widget to display.
+  /// The main child widget to display.
   final Widget child;
 
-  // The visibility of the child widget when loading. Defaults to 0.50.
+  /// The visibility of the child widget when loading. Defaults to 0.50.
   final double childVisibility;
 
-  // Flag indicating whether the widget is in a loading state.
+  /// Flag indicating whether the widget is in a loading state.
   final bool isLoading;
 
-  // Constructor to initialize the widget with required parameters.
+  /// Constructor to initialize the widget with required parameters.
+  ///
+  /// [isLoading]: Flag indicating whether the widget is in a loading state.
+  /// [child]: The main child widget to display.
+  /// [childVisibility]: The visibility of the child widget when loading. Defaults to 0.50.
+  /// [buildChildWhileLoading]: Whether to build the child widget while loading. Defaults to false.
+  /// [backGroundColor]: Background color of the overlay. Defaults to white.
   const IsLoadingWidget({
-    super.key,
+    Key? key,
     required this.isLoading,
     required this.child,
     this.childVisibility = 0.50,
     this.buildChildWhileLoading = false,
     this.backGroundColor = Colors.white,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
